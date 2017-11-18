@@ -1,58 +1,104 @@
 {  
-   "myservice":{  
-      "service":"myservice",
-      "action":"CruiseTest",
-      "plugIn":"CruiseCorePlugin",
-      "PluginEnabled":"true",
-      "TestType":null
+   "AddConnection.cDBCreatePool":{  
+      "PoolCreated":"true"
    },
-   "AddConnection:cDBCreatePool":{  
-      "Pool Already exists":"Not added."
+   "UpdateRecord.update.MyPool":{  
+      "Query":"Update  cruisecore.cru_components set cru_components.COMPONENTNAME='Thank you disillusionment',cru_components.COMPONENTPARENTINDEX=null,cru_components.COMPONENTENABLED=null where cru_components.COMPONENTINDEX='0000'",
+      "UpdateCount":"1"
    },
-   "Pool Information:cDBGetPoolInfo":{  
-      "databaseName":null,
-      "vendor":"MySQL",
-      "schema":"cruisecore",
-      "catalog":null,
-      "types":[  
-         "TABLE",
-         "VIEW"
-      ],
-      "connectionProperties":{  
-         "password":"admin",
-         "minimumIdle":"5",
-         "schema":"cruisecore",
-         "maximumPoolSize":"25",
-         "jdbcUrl":"jdbc:mysql://localhost:3306/cruisecore?useSSL=false",
-         "DriverClassName":"com.mysql.cj.jdbc.Driver",
-         "PoolName":"MyPool",
-         "username":"root"
-      },
-      "tableList":[  
-         {  
-            "TableName":"testtable",
-            "Type":"TABLE",
-            "Columns":"[{NONE_UNIQUE=false, DECIMAL_DIGITS=, KEY=true, KEYTABLENAME=testtable, TYPE_NAME=VARCHAR, INDEX_NAME=PRIMARY, IS_AUTOINCREMENT=NO, NULLABLE=0, COLUMN_SIZE=50, COLUMN_NAME=MyPrimaryIndex, COLUMN_DEF=uuid_short}, {DECIMAL_DIGITS=, IS_AUTOINCREMENT=NO, COLUMN_DEF=, NULLABLE=0, TYPE_NAME=VARCHAR, COLUMN_NAME=SomeOtherField, COLUMN_SIZE=50}]"
-         },
-         {  
-            "TableName":"cru_component_vw",
-            "Type":"VIEW",
-            "Columns":"[{DECIMAL_DIGITS=, IS_AUTOINCREMENT=NO, COLUMN_DEF=, NULLABLE=1, TYPE_NAME=VARCHAR, COLUMN_NAME=path, COLUMN_SIZE=240}, {DECIMAL_DIGITS=, IS_AUTOINCREMENT=NO, COLUMN_DEF=, NULLABLE=0, TYPE_NAME=VARCHAR, COLUMN_NAME=componentindex, COLUMN_SIZE=40}, {DECIMAL_DIGITS=, IS_AUTOINCREMENT=NO, COLUMN_DEF=, NULLABLE=1, TYPE_NAME=VARCHAR, COLUMN_NAME=componentparentindex, COLUMN_SIZE=40}]"
-         },
-         {  
-            "TableName":"cru_components",
-            "Type":"TABLE",
-            "Columns":"[{NONE_UNIQUE=true, DECIMAL_DIGITS=, KEY=true, KEYTABLENAME=cru_components, TYPE_NAME=VARCHAR, INDEX_NAME=Index 3, IS_AUTOINCREMENT=NO, NULLABLE=1, COLUMN_SIZE=240, COLUMN_NAME=COMPONENTNAME, COLUMN_DEF=}, {NONE_UNIQUE=false, DECIMAL_DIGITS=, KEY=true, KEYTABLENAME=cru_components, TYPE_NAME=VARCHAR, INDEX_NAME=PRIMARY, IS_AUTOINCREMENT=NO, NULLABLE=0, COLUMN_SIZE=40, COLUMN_NAME=COMPONENTINDEX, COLUMN_DEF=}, {NONE_UNIQUE=true, DECIMAL_DIGITS=, KEY=true, KEYTABLENAME=cru_components, TYPE_NAME=VARCHAR, INDEX_NAME=Index 2, IS_AUTOINCREMENT=NO, NULLABLE=1, COLUMN_SIZE=40, COLUMN_NAME=COMPONENTPARENTINDEX, COLUMN_DEF=}, {DECIMAL_DIGITS=, IS_AUTOINCREMENT=NO, COLUMN_DEF=1, NULLABLE=1, TYPE_NAME=INT, COLUMN_NAME=COMPONENTENABLED, COLUMN_SIZE=10}]"
-         }
-      ]
+   "selectAll.select.MyPool":{  
+      "Query":"Select cru_components.COMPONENTNAME,cru_components.COMPONENTINDEX,cru_components.COMPONENTPARENTINDEX,cru_components.COMPONENTENABLED from cruisecore.cru_components"
    },
-   "CruiseErrors":[  
+   "096f7254-c168-4c39-9c1d-c33afb611ce8":[  
       {  
-         "errorNumber":"13001",
-         "errorMsg":"Validation failed. Missing Required Parameter:tablename",
-         "errorType":"ERROR:app",
-         "errorService":"AddConnection",
-         "errorAction":"cDBGetTableInfo"
+         "COMPONENTNAME":"Thank you disillusionment",
+         "COMPONENTINDEX":"0000",
+         "COMPONENTPARENTINDEX":null,
+         "COMPONENTENABLED":null
+      },
+      {  
+         "COMPONENTNAME":"myparent0001",
+         "COMPONENTINDEX":"0001",
+         "COMPONENTPARENTINDEX":null,
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"myparent0002",
+         "COMPONENTINDEX":"0002",
+         "COMPONENTPARENTINDEX":null,
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child3_0",
+         "COMPONENTINDEX":"0003",
+         "COMPONENTPARENTINDEX":"0003",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child1x",
+         "COMPONENTINDEX":"0010",
+         "COMPONENTPARENTINDEX":"0001",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"grandchild 1",
+         "COMPONENTINDEX":"00100",
+         "COMPONENTPARENTINDEX":"0010",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"grandchild 2",
+         "COMPONENTINDEX":"00101",
+         "COMPONENTPARENTINDEX":"0010",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child1",
+         "COMPONENTINDEX":"0011",
+         "COMPONENTPARENTINDEX":"0001",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child2",
+         "COMPONENTINDEX":"0012",
+         "COMPONENTPARENTINDEX":"0001",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child3",
+         "COMPONENTINDEX":"0013",
+         "COMPONENTPARENTINDEX":"0001",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child20_0",
+         "COMPONENTINDEX":"0020",
+         "COMPONENTPARENTINDEX":"0002",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child21_0",
+         "COMPONENTINDEX":"0021",
+         "COMPONENTPARENTINDEX":"0002",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child22_0",
+         "COMPONENTINDEX":"0022",
+         "COMPONENTPARENTINDEX":"0002",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child23_0",
+         "COMPONENTINDEX":"0023",
+         "COMPONENTPARENTINDEX":"0002",
+         "COMPONENTENABLED":1
+      },
+      {  
+         "COMPONENTNAME":"child24_0",
+         "COMPONENTINDEX":"0024",
+         "COMPONENTPARENTINDEX":"0002",
+         "COMPONENTENABLED":1
       }
    ]
 }
